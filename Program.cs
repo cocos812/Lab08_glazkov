@@ -1,4 +1,7 @@
-﻿// Задания 1
+﻿a();
+Console.WriteLine(Gcd(48, 18));
+Console.WriteLine(Lcm(4, 6));
+// Задания 1
 PrintLine();
 Console.WriteLine("Отчет");
 PrintLine();
@@ -90,17 +93,17 @@ static bool IsPrime(int n)
     return (c == 2);
 }
 // Задание 6
-// static int ReadPositive(string message)
-// {
-//     int a;
-//     do
-//     {
-//         Console.Write(message);
-//         a = Convert.ToInt32(Console.ReadLine());
-//     }
-//     while (a <= 0);
-//     return a;
-// }
+static int ReadPositive(string message)
+{
+    int a;
+    do
+    {
+        Console.Write(message);
+        a = Convert.ToInt32(Console.ReadLine());
+    }
+    while (a <= 0);
+    return a;
+}
 // Итоговая задача
 static void a()
 {
@@ -147,17 +150,17 @@ static void a()
     while (z != 0);
 }
 // Дополнительное задание
-// static int Gcd(int a, int b)
-// {
-//     while (b != 0)
-//     {
-//         int b1 = b;
-//         b = a % b;
-//         a = b1;
-//     }
-//     return a;
-// }
-// static int Lcm(int a, int b)
-// {
-//     return a / Gcd(a, b) * b;
-// }
+static int Gcd(int a, int b)
+{
+    while (b != 0)
+    {
+        int b1 = b;
+        b = a % b;
+        a = b1;
+    }
+    return a;
+}
+static int Lcm(int a, int b)
+{
+    return a / Gcd(a, b) * b;
+}
